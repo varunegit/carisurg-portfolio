@@ -14,7 +14,7 @@
 -1 = Male
 -0 = Female
 
-#Mercer General Project (Day 2 Challenge)
+Mercer General Project (Day 2 Challenge)
 
 ##Task
 -We first practiced on the GCS data, familiarizing ourselves with the general cleaning processes, especially with the median portion
