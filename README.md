@@ -1,5 +1,5 @@
 # carisurg-portfolio
-# Mercer General Project (Day 1 Challenge)
+# Mercer General Project- Tutorial 1 (Day 1 Challenge)
 
 ##This code cleans the data from the Gender column and processes it using libraries from Python such as panda in Google collab.
 
@@ -14,7 +14,7 @@
 -1 = Male
 -0 = Female
 
-# Mercer General Project (Day 2 Challenge)
+# Mercer General Project-Tutorial 2 (Day 2 Challenge)
 
 ## Task
 
@@ -35,3 +35,13 @@
 ## Final Result
 
 - The resulting dataset had a final `NaN` count of **0** because the missing values were successfully imputed using the median.
+
+# Mercer General Project-Tutorial 3 (Day 3 Challenge)
+
+## Task
+
+-Incorporated the cleaned versions of the columns from the data file into the code
+-Visualize patterns using histograms between Respiratory Rate with the patients.
+-Visualize patterns using histograms between Fio2 with the patients.
+-Visualized patterns of Relationship between respiratory rate with Fio2 by plotting a scatter plot diagram with using python functions
+-Used python functions to plot a scatter plot diagram to show the relationship of MAP and age
