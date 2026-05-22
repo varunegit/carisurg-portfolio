@@ -41,7 +41,11 @@
 ## Task
 
 -Incorporated the cleaned versions of the columns from the data file into the code
+
 -Visualize patterns using histograms between Respiratory Rate with the patients.
+
 -Visualize patterns using histograms between Fio2 with the patients.
+
 -Visualized patterns of Relationship between respiratory rate with Fio2 by plotting a scatter plot diagram with using python functions
+
 -Used python functions to plot a scatter plot diagram to show the relationship of MAP and age
