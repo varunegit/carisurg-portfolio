@@ -1,51 +1,45 @@
 # carisurg-portfolio
-# Mercer General Project- Tutorial 1 (Day 1 Challenge)
+# Overview
 
-##This code cleans the data from the Gender column and processes it using libraries from Python such as panda in Google collab.
+This respository contains my work completed as part of the CariSurg MedTech Pathways Programme. It serves as a portfolio to showcase my code and projects that include data science, machine learning, research papers and healthcare analytics.
 
-## Tasks
--Connected the file "EmergencyTriageDataset_Reduced_Dirty.csv" from Google Drive to Google Colab
--Cleaned Gender Column in the file
--Checked for outliers such as Nan Values
--Replaced the unclean Gender column with the cleaned version
+# What is this project?
 
-## Reduced 6 different entities representing 2 genders male and females as:
+This project is to demonstrates data cleaning, processing, exploratory data analysis, visualization and the development of reproducible workflows using Python and Jupyter Notebooks. Throughout this project, clinical datasets were processed to improve data quality by handling missing values by using imputation methods, correcting inconsistent entries and validating data ranges.
 
--1 = Male
--0 = Female
+# Who is it for?
 
-# Mercer General Project-Tutorial 2 (Day 2 Challenge)
+This repository is intended for:
 
-## Task
+CariSurg mentors and instructors
+Students learning healthcare data science and AI
+Researchers interested in medical data preprocessing
+Recruiters and employers reviewing my technical portfolio
+Anyone interested in healthcare analytics using Python
 
-- First practiced on the GCS data, familiarizing ourselves with the general cleaning processes, especially with the median portion.
+# How do I install and run it?
 
-- The Pulse Column cleaning process began by inspecting the pulse row data, by checking the count of unique values and the frequency of certain values.
+1. Clone the repository
+git clone https://github.com/varunegit/carisurg-portfolio.git
+cd carisurg-portfolio
+2. Install dependencies
+pip install -r requirements.txt
+3. Run the notebooks
+Launch Jupyter Notebook or open the notebooks in Google Colab and execute the cells in order.
 
-- Then once familiarized with the data, the non-numeric values were converted to numeric, and the valid range was established.
+# Data Source
 
-- Incorporated logical masks (`df.loc`) to scan the columns for values outside valid boundaries. Any rows holding these impossible numbers were immediately replaced with `NaN` placeholders.
+The data used an emergency department triage dataset for educational and research purposes. To protect from data leaks, the datasets were stored locally in the data/ folder and excluded from this public respoistory through .gitignore. Users wishing to reproduce the analyses should place the required dataset into data/ folder before running the notebooks.
 
-- Next, the data was imputed with the median because the data was skewed, as seen by both the minimum and maximum values. The median was observed to be the best imputation method.
+# Author
+Varune Joseph
+Participant in the CariSurg MedTech Pathways Programme with interests in Artificial Intelligence and Machine Learning
 
-- A visualization graph was drafted in order to actually see the data after it was cleaned, for further understandability.
+# Contact
 
----
+GitHub: https://github.com/varunegit
+ 
 
-## Final Result
 
-- The resulting dataset had a final `NaN` count of **0** because the missing values were successfully imputed using the median.
 
-# Mercer General Project-Tutorial 3 (Day 3 Challenge)
 
-## Task
-
--Incorporated the cleaned versions of the columns from the data file into the code
-
--Visualize patterns using histograms between Respiratory Rate with the patients.
-
--Visualize patterns using histograms between Fio2 with the patients.
-
--Visualized patterns of Relationship between respiratory rate with Fio2 by plotting a scatter plot diagram with using python functions
-
--Used python functions to plot a scatter plot diagram to show the relationship of MAP and age
