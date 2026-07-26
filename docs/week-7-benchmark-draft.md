@@ -1,4 +1,4 @@
-# Week 7 – Draft Benchmark Table (Interim)
+# Week 7 – Benchmark Table
 
 **Author:** Varune | Values from Section 15 of `Week_7_Interim_Deliverable.ipynb`, sorted by macro-F1.
 
