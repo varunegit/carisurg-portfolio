@@ -1,0 +1,47 @@
+seed: 42
+
+data:
+  raw_path: "data/yaleemmlc_admissionprediction_triage.csv"
+  target: "esi"
+
+use_demographics: false   # fairness decision from Week 5/6 — off by default
+
+# Final model — one decision, one model, one frozen set of hyperparameters.
+# Reasoning recorded in docs/decisions/2026-week-7-model-choice.md:
+# Gradient Boosting ties the tuned Random Forest on ESI-1 recall (0.312)
+# at ~38x less training cost and the lowest inference time of any
+# candidate (0.015 ms/pred). Conditional on adding a SHAP explanation
+# panel before deployment (see decision journal, "Things I do not yet know").
+final_model: "gradient_boosting"
+
+models:
+  logistic_regression:
+    max_iter: 1000
+
+  decision_tree: {}
+
+  random_forest:
+    n_estimators: 300
+    class_weight: "balanced"
+
+  random_forest_tuned:
+    n_estimators: 200
+    max_depth: null
+    min_samples_leaf: 8
+    max_features: null
+    class_weight: "balanced"
+
+  gradient_boosting:
+    max_depth: 6
+    learning_rate: 0.1
+    max_iter: 300
+    class_weight: "balanced"
+
+  mlp:
+    hidden_layer_sizes: [64, 32]
+    alpha: 0.001
+    max_iter: 500
+
+train_test_split:
+  test_size: 0.2
+  stratify: true
