@@ -5,7 +5,7 @@ This respository contains my work completed as part of the CariSurg MedTech Path
 
 # What is this project?
 
-This project is to demonstrates data cleaning, processing, exploratory data analysis, visualization and the development of reproducible workflows using Python and Jupyter Notebooks. Throughout this project, clinical datasets were processed to improve data quality by handling missing values by using imputation methods, correcting inconsistent entries and validating data ranges.
+This project predicts a patient's Emergency Severity Index (ESI, 1-5) at the moment of ED triage. Earlier weeks covered data cleaning, processing, exploratory data analysis, and visualization of clinical datasets, improving data quality through imputation, correcting inconsistent entries, and validating data ranges. Week 7 benchmarked six candidate models and selected a final one (see docs/model-selection.md). Week 8 refactored the notebook code into a reproducible src/ package driven by a single config.yaml (see HANDOVER.md).
 
 # Who is it for?
 
@@ -24,8 +24,15 @@ git clone https://github.com/varunegit/carisurg-portfolio.git
 cd carisurg-portfolio
 2. Install dependencies
 pip install -r requirements.txt
-3. Run the notebooks
-Launch Jupyter Notebook or open the notebooks in Google Colab and execute the cells in order.
+3. Place the dataset in data/ (see Data Source below)
+4. Train the pinned final model
+python scripts/train.py --config config.yaml
+
+Exploratory notebooks (Weeks 0-7) remain in notebooks/ and can still be run directly in Jupyter or Google Colab.
+
+# Reproducibility
+
+The random seed (42) is fixed in config.yaml and applied to the train/test split and every model. Re-running python scripts/train.py --config config.yaml on the same data should reproduce the same held-out metrics reported in docs/model-selection.md.
 
 # Data Source
 
@@ -38,8 +45,3 @@ Participant in the CariSurg MedTech Pathways Programme with interests in Artific
 # Contact
 
 GitHub: https://github.com/varunegit
- 
-
-
-
-
